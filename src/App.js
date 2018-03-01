@@ -12,6 +12,7 @@ class App extends Component {
     super(props)  
     this.state = {
       display_products : categories,
+      inventory : inventory
     }
 
     this.handleFilter.bind(this)
@@ -19,10 +20,14 @@ class App extends Component {
 
 
   handleFilter = (category) => {
-        
     this.setState({display_products:category});
-    
-    console.log(category)
+    if(category != "All"){
+      let selected_inventory = inventory.filter((item) => item.category == category);
+      this.setState({inventory:selected_inventory});
+    }else{
+      this.setState({inventory:inventory})
+    }
+
   }
 
 
@@ -30,12 +35,16 @@ class App extends Component {
 
     return (
       <div className="App">
-        <MyComponent title="Make School"/>
+        <MyComponent 
+          title="Make School"
+        />
         <Categories 
           categories={categories} 
           handleFilter={this.handleFilter}
-          />
-        <Products inventory={inventory}/>
+        />
+        <Products 
+          inventory={this.state.inventory}
+        />
 
       </div>
     );
