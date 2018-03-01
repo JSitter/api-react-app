@@ -2,9 +2,6 @@ import React, {Component} from 'react'
 import Item from './item'
 
 class Products extends Component{
-    constructor(props){
-        super(props)
-    }
 
     render(){
         const items = this.props.inventory.map((item, index)=>{

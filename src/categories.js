@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
-import Categories from './categories'
+import Category from './category';
 
 class Categories extends Component {
-    constructor(props){
-        super(props)
-    }
 
     render(){
+        const category = this.props.categories.map((item, index)=>{
+
+            return (
+                
+                <Category
+                    key = {index}
+                    name = {item}
+                    handleFilter = {this.props.handleFilter}
+                />
+            )
+        })
         return (
             <div>
-                <Category name={this.props.name}/>
+                {category}
             </div>
         )
     }
