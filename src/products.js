@@ -10,12 +10,19 @@ class Products extends Component{
                 name={item.name}
                 price= {item.price}
                 category={item.category}
+                description = {item.description}
             />)
         })
 
         return(
-            <div>
+        <div className="container">
+            <div className="row">
+
+                <div className="col s12 center-align">
                 {items}
+                </div>
+
+            </div>
             </div>
         )
     }

@@ -18,6 +18,10 @@ class Categories extends Component {
         return (
             <div>
                 {category}
+                <Category
+                    name="All"
+                    handleFilter = {this.props.handleFilter}
+                />
             </div>
         )
     }

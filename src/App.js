@@ -21,6 +21,7 @@ class App extends Component {
 
   handleFilter = (category) => {
     this.setState({display_products:category});
+
     if(category != "All"){
       let selected_inventory = inventory.filter((item) => item.category == category);
       this.setState({inventory:selected_inventory});
@@ -32,7 +33,8 @@ class App extends Component {
 
 
   render() {
-
+    // const filteredInventory = inventory.filter(...)
+    
     return (
       <div className="App">
         <MyComponent 
@@ -40,7 +42,7 @@ class App extends Component {
         />
         <Categories 
           categories={categories} 
-          handleFilter={this.handleFilter}
+          handleFilter={ this.handleFilter }
         />
         <Products 
           inventory={this.state.inventory}

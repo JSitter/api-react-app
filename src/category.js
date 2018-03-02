@@ -4,8 +4,8 @@ class Category extends Component{
 
     render(){
         return (
-            <button onClick={()=> this.props.handleFilter(this.props.name) }>{this.props.name}
-            </button>
+            <a className="waves-effect waves-light btn" onClick={()=> this.props.handleFilter(this.props.name) }>{this.props.name}
+            </a>
         )
     }
 }

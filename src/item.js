@@ -4,11 +4,19 @@ class Item extends Component{
 
     render(){
         return(
-            <div>
-                <h1>{this.props.name}</h1>
-                <small>{this.props.price}</small>
-                <p>{this.props.category}</p>
-            </div>
+
+                <div className="card blue-grey darken-1 hoverable col s6 m3 center-align">
+                    <div className="card-content white-text">
+                        <span class="card-title">{this.props.name}</span>
+                        <p>
+                        {this.props.description}
+                        </p>
+                        <small>{this.props.price}</small>
+                        <p>{this.props.category}</p>
+                    </div>
+
+                </div>
+
         )
     }
 }

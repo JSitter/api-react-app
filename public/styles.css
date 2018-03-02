@@ -16,3 +16,8 @@ h1.title {
     75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
     100% { text-shadow: 0 0 black; }
   }
+
+  .btn{
+      margin: 3px;
+  }
+
