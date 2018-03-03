@@ -1,16 +1,16 @@
 import React, {Component} from 'react'
-import Item from './item'
+import Product from './product'
 
 class Products extends Component{
 
     render(){
-        const items = this.props.inventory.map((item, index)=>{
-            return (<Item
-                key={item.id}
-                name={item.name}
-                price= {item.price}
-                category={item.category}
-                description = {item.description}
+        const products = this.props.inventory.map((product, index)=>{
+            return (<Product
+                key={product.id}
+                name={product.name}
+                price= {product.price}
+                category={product.category}
+                description = {product.description}
             />)
         })
 
@@ -19,7 +19,7 @@ class Products extends Component{
             <div className="row center">
 
                 <div className="col s12 center-align">
-                {items}
+                {products}
                 </div>
 
             </div>

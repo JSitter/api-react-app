@@ -1,5 +1,4 @@
 {
-  "port": 3010,
   "name": "api-app",
   "version": "0.1.0",
   "private": true,
