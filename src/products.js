@@ -5,7 +5,7 @@ class Products extends Component{
 
     render(){
         const items = this.props.inventory.map((item, index)=>{
-            return (<Item 
+            return (<Item
                 key={item.id}
                 name={item.name}
                 price= {item.price}
@@ -16,7 +16,7 @@ class Products extends Component{
 
         return(
         <div className="container">
-            <div className="row">
+            <div className="row center">
 
                 <div className="col s12 center-align">
                 {items}

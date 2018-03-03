@@ -21,3 +21,6 @@ h1.title {
       margin: 3px;
   }
 
+.card{
+  margin: 10px !important;
+}
